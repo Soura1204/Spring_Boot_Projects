@@ -1,0 +1,24 @@
+Spring REST (Representational State Transfer) refers to the use of the Spring Framework to build RESTful web services. RESTful web services are a way of designing networked applications that adhere to REST principles, such as statelessness, uniform interface, and client-server architecture.
+
+Key Concepts in Spring REST:
+1. Controllers:
+a) @RestController: A specialized version of the @Controller annotation that automatically serializes responses to JSON or XML and returns them to the client.
+b) @RequestMapping: Used to map HTTP requests to handler methods of MVC and REST controllers. You can specify the HTTP method (GET, POST, PUT, DELETE, etc.) using this annotation.
+2. HTTP Methods:
+a) GET: Retrieve data from the server (e.g., /api/products).
+b) POST: Create a new resource on the server (e.g., /api/products to add a new product).
+c) PUT: Update an existing resource (e.g., /api/products/{id}).
+d) DELETE: Delete a resource (e.g., /api/products/{id}).
+3. Path Variables and Query Parameters:
+a) Path Variables: Use @PathVariable to capture values from the URL (e.g., /api/products/{id}).
+b) Query Parameters: Use @RequestParam to capture query parameters (e.g., /api/products?category=electronics).
+4.Request and Response Bodies:
+a) @RequestBody: Used to bind the HTTP request body to a method parameter.
+b) @ResponseBody: Used to bind the method return value to the web response body.
+5. Exception Handling:
+a)@ExceptionHandler: Used to handle specific exceptions in a controller.
+b)@ControllerAdvice: A global exception handler that applies to all controllers.
+6.Content Negotiation:
+a) Spring REST supports content negotiation, where the client can specify the desired response format (JSON, XML, etc.) via the Accept header.
+7. HATEOAS:
+a) Spring provides support for HATEOAS (Hypermedia As The Engine Of Application State), allowing resources to include links to related resources.
